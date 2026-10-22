@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Échanger avec Francis Lalanne</title>
+<script>
+  // Redirige vers le formulaire « Échanger avec Francis Lalanne » en conservant le pré-remplissage.
+  // Seuls les paramètres du formulaire (usp, entry.*) sont transmis ; la destination est fixe.
+  (function () {
+    var cible = "https://docs.google.com/forms/d/e/1FAIpQLSfEjeyuQa4Gmk9lGHU5BA0fVbHwD4_EEaMxFxUmcyPi6ADIYA/viewform";
+    var entree = new URLSearchParams(window.location.search), sortie = new URLSearchParams();
+    entree.forEach(function (v, k) { if (k === "usp" || /^entry\.\d+$/.test(k)) sortie.append(k, v); });
+    var q = sortie.toString();
+    window.location.replace(cible + (q ? "?" + q : ""));
+  })();
+</script>
+<style>
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#FEFAE8;color:#232838;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:16px;text-align:center}
+  a{color:#022561;font-weight:bold}
+</style>
+</head>
+<body>
+  <p>Ouverture du formulaire « Échanger avec Francis Lalanne »…<br>
+  Si rien ne se passe, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEjeyuQa4Gmk9lGHU5BA0fVbHwD4_EEaMxFxUmcyPi6ADIYA/viewform">cliquez ici</a>.</p>
+</body>
+</html>
